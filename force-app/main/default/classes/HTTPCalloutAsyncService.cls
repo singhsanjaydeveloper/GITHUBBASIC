@@ -6,7 +6,7 @@
 * Description:- This is the service class for performing asynchronous HTTP Callouts
 * Contributors:-
 *    1. New Branch Created 
-*/
+
 public class HTTPCalloutAsyncService {
 
     List<String> requestLabels;
@@ -19,7 +19,7 @@ public class HTTPCalloutAsyncService {
 
     /*
     * Getter and Setters - Begin
-    */
+    
 	public List<String> getRequestLabels() {
 		return requestLabels;
 	}
@@ -53,7 +53,7 @@ public class HTTPCalloutAsyncService {
 
     /*
     * Method to initialize data members
-    */
+    
     void initialize(Integer timeout) {
         requestLabels = new List<String>();
         requestTimeout = timeout;
@@ -65,7 +65,7 @@ public class HTTPCalloutAsyncService {
 
     /*
     * Constructor
-    */
+    
     public HTTPCalloutAsyncService(Integer requestTimeout, List<HTTPRequest> httpRequests) {
         this.httpRequests = new List<HTTPRequest>();
         initialize(requestTimeout);
@@ -79,7 +79,7 @@ public class HTTPCalloutAsyncService {
 
     /*
     * Constructor with custom metadata
-    */
+    
     public HTTPCalloutAsyncService(Integer requestTimeout, List<String> customMetadataList) {
         requestMap = new Map<String, HTTPRequest>();
         initialize(requestTimeout);
@@ -98,7 +98,7 @@ public class HTTPCalloutAsyncService {
 
     /*
     * This method is used to send continuation request
-    */
+    
     public Continuation sendRequest(String responseMethodName) {
         Continuation con = new Continuation(requestTimeout);
         con.continuationMethod = responseMethodName;
@@ -121,6 +121,7 @@ public class HTTPCalloutAsyncService {
     /*
     * This method is used to parse the continuation response
     */
+    /*
     public List<HTTPResponse> getResponse(List<String> requestLabels) {
         List<HTTPResponse> responses = new List<HTTPResponse>();
         for(String requestLabel : requestLabels) {
@@ -128,4 +129,8 @@ public class HTTPCalloutAsyncService {
         }
         return responses;
     }
+}
+*/
+public class HTTPCalloutAsyncService {
+    string a;
 }
